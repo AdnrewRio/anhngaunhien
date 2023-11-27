@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hiển thị ảnh ngẫu nhiên</title>
+</head>
+<body>
+<div id="imageContainer" >
+    <img id="randomImage" style=" width: 1080px; height: 720px;" >
+</div>
+    <button onclick="getRandomImage()" 
+        style="width: 100px; height: 30px; 
+        align-items: center; color: black; background-color: aquamarine;">Ngẫu Nhiên</button>
+<script>
+  const imageSources = [
+  'img/Alternaria sp.jpg',
+  'img/Ascaris lumbricoides ova.jpg',
+  'img/Aspergillus fumigatus.jpg',
+  'img/Candida sp.jpg',
+  'img/Clonorchis sinensis ova.jpg',
+  'img/Ctenocephalides canis adult.jpg',
+  'img/Culex sp larva.jpg',
+  'img/Entamoeba coli cyst.jpg',
+  'img/Entamoeba coli trophozoites.jpg',
+  'img/Entamoeba histolytica cyst.jpg',
+  'img/Entamoeba histolytica trophozoite.jpg',
+  'img/Enterobius vermicularis adult.jpg',
+  'img/Fasciola gigantica adult.jpg',
+  'img/Fasciolopsis buski ova.jpg',
+  'img/Fusarium sp.jpg',
+  'img/Giardia lamblia cyst.jpg',
+  'img/Giardia lamblia trophozoites.jpg',
+  'img/Histoplasma capsulatum.jpg',
+  'img/Hình 1.jpg',
+  'img/Mucor sp.jpg',
+  'img/Necator americanus adult.jpg',
+  'img/Nigrospora sp.jpg',
+  'img/Pediculus captitis adult.jpg',
+  'img/Penicillium sp.jpg',
+  'img/Phthirius inguinalis adult.jpg',
+  'img/Plasmodium falciparum gametocytes.jpg',
+  'img/Plasmodium falciparum trophozoite.jpg',
+  'img/Plasmodium vivax gametocytes.jpg',
+  'img/Plasmodium vivax schizonts.jpg',
+  'img/Plasmodium vivax trophozoites.jpg',
+  'img/Rhipicephalus sanguinius adult.jpg',
+  'img/Strongyloides stercoralis larva I.jpg',  
+  'img/Taenia sp ova.jpg',
+  'img/Trichuris trichiura ova.jpg',
+  'img/Trứng giun móc.jpg',
+  'img/Xenopsylla cheopis adult.jpg',
+];
+
+function getRandomImage() {
+  const randomIndex = Math.floor(Math.random() * imageSources.length);
+  const randomImage = imageSources[randomIndex];
+  
+  const imageElement = document.getElementById('randomImage');
+  imageElement.src = randomImage;
+}
+window.onload = getRandomImage;
+</script>
+
+</body>
+</html>
